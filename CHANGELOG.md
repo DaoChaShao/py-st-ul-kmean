@@ -5,6 +5,7 @@
 
 ### Features
 
+- add timer functionality for data loading in preparation.py ([1e11e44](https://github.com///commit/1e11e44e7d3ca7496b277fb4beaab7b560505bb9))
 - add preparation.py for data upload and preparation functionality ([c8214b4](https://github.com///commit/c8214b40faf280325659a53bc469a61809d9ca25))
 - update layout.py to include new pages for Data Preparation and About sections ([d0d97b4](https://github.com///commit/d0d97b408f76ade7b58730f82f7cf3daf0cb72ee))
 - add CHANGELOG.md for version 0.1.0 with project features and updates ([4708409](https://github.com///commit/4708409b16533946bb9574df8d5eb2f7b65f7174))
@@ -22,4 +23,12 @@
 - add __init__.py with main function template ([ac08ea8](https://github.com///commit/ac08ea83a096f3921661bd1b270daaa3b9ccac2c))
 - add .gitignore to exclude IDE and environment files ([a2eab85](https://github.com///commit/a2eab8556b280b02981cba1bfd5cf594e569b720))
 - add .gitignore to exclude IDE files and environment settings ([3c66950](https://github.com///commit/3c66950f0242ec7823210fe83dae1e3eec947173))
+
+### Bug Fixes
+
+- refine timer start and end messages for clarity ([c24e9d5](https://github.com///commit/c24e9d5fcf31dd12092fb067730f849edbe197f3))
+
+### Chore
+
+- update CHANGELOG.md for version 0.1.0 release date change ([3b1ae7f](https://github.com///commit/3b1ae7fec8d1215436fba387a27cb8ba33884470))
 
