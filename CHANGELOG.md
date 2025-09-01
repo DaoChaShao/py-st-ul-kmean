@@ -5,6 +5,11 @@
 
 ### Features
 
+- add test.py for KMeans model testing with scatter plot visualization ([12995cc](https://github.com///commit/12995cc21cb4b6ce1bf413bf2a78bc4aec68ffd7))
+- rename ul_kmean.py to simple.py and implement KMeans clustering functionality ([cc2bcc6](https://github.com///commit/cc2bcc63fc94af606d0c602ac3bbc04ba11e33e7))
+- store timer in session state for improved data preparation feedback ([a61d748](https://github.com///commit/a61d74827fd4c113ca8ae80d5520a6744957f88d))
+- update layout to include new simple KMeans pages and adjust titles ([4d5a787](https://github.com///commit/4d5a78741a9b9bbfcea90fee216bc1fac2cc3c26))
+- enhance scatter plot functions with and without category support ([137e426](https://github.com///commit/137e42626d697b19c80699f9fdc6679ab544317e))
 - add timer functionality for data loading in preparation.py ([1e11e44](https://github.com///commit/1e11e44e7d3ca7496b277fb4beaab7b560505bb9))
 - add preparation.py for data upload and preparation functionality ([c8214b4](https://github.com///commit/c8214b40faf280325659a53bc469a61809d9ca25))
 - update layout.py to include new pages for Data Preparation and About sections ([d0d97b4](https://github.com///commit/d0d97b408f76ade7b58730f82f7cf3daf0cb72ee))
@@ -30,5 +35,6 @@
 
 ### Chore
 
+- update CHANGELOG.md to include timer functionality and bug fixes ([47dec57](https://github.com///commit/47dec57ff1a8b300bad37a7066211b5ee65fdfa8))
 - update CHANGELOG.md for version 0.1.0 release date change ([3b1ae7f](https://github.com///commit/3b1ae7fec8d1215436fba387a27cb8ba33884470))
 
