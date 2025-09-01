@@ -10,7 +10,7 @@ from pandas import DataFrame
 from streamlit import (empty, sidebar, subheader, session_state, number_input,
                        caption, button, columns, metric)
 
-from utils.helper import Timer, scatter_with_category
+from utils.helper import Timer, scatter_2d_with_category
 
 empty_messages: empty = empty()
 left, _ = columns(2, gap="large")
@@ -61,7 +61,7 @@ with sidebar:
             )
             caption(f"The axis y is set to {cols[1]}.")
 
-            fig = scatter_with_category(
+            fig = scatter_2d_with_category(
                 data=session_state["data"],
                 x_name=cols[0],
                 y_name=cols[1],
