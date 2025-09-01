@@ -5,6 +5,12 @@
 
 ### Features
 
+- rename scatter functions for 2D clarity in simple_train.py ([f1ba37f](https://github.com///commit/f1ba37f0c3fb05d5de6cb6c1b68e2878bf37a03c))
+- update scatter function name for consistency and clarity ([6e05dac](https://github.com///commit/6e05dacdfa8aec152d960f7e2ac02eceb0447c9a))
+- add advanced training and testing pages to layout ([7453b89](https://github.com///commit/7453b898e700bce811eff1e16b931ccade4e87db))
+- rename scatter functions for improved clarity in naming ([60ca438](https://github.com///commit/60ca438a69ebcb7e57529e59c74aced288902972))
+- add advanced_train.py for initial training functionality ([2f753db](https://github.com///commit/2f753dbdb3bb0fd9d996dbb822df6db43f9914e3))
+- add advanced_test.py for enhanced testing capabilities ([81b56ae](https://github.com///commit/81b56aea6356371be0ba727bec3cfdcfcf667e12))
 - rename simple.py to simple_train.py for improved clarity in file naming ([5518707](https://github.com///commit/5518707d91f03bc3e5b7ad00086020fdb91d5b28))
 - rename test.py to simple_test.py for consistency in naming convention ([39e579b](https://github.com///commit/39e579b64eae56224a53bfa08b110a73f5c24105))
 - update layout to replace simple.py and test.py with simple_train.py and simple_test.py ([0e7fbb5](https://github.com///commit/0e7fbb584ec8d0ec0047181c7a258df1ff0e4965))
@@ -38,6 +44,7 @@
 
 ### Chore
 
+- update CHANGELOG.md to include recent file renaming and layout changes ([47431aa](https://github.com///commit/47431aad31ec475a84bc8126dabf821d2333ca8b))
 - update CHANGELOG.md to reflect recent feature additions and improvements ([a92fcf7](https://github.com///commit/a92fcf7767a18e6bae4bb7f479cee6296b03ded3))
 - update CHANGELOG.md to include timer functionality and bug fixes ([47dec57](https://github.com///commit/47dec57ff1a8b300bad37a7066211b5ee65fdfa8))
 - update CHANGELOG.md for version 0.1.0 release date change ([3b1ae7f](https://github.com///commit/3b1ae7fec8d1215436fba387a27cb8ba33884470))
