@@ -5,6 +5,9 @@
 
 ### Features
 
+- rename simple.py to simple_train.py for improved clarity in file naming ([5518707](https://github.com///commit/5518707d91f03bc3e5b7ad00086020fdb91d5b28))
+- rename test.py to simple_test.py for consistency in naming convention ([39e579b](https://github.com///commit/39e579b64eae56224a53bfa08b110a73f5c24105))
+- update layout to replace simple.py and test.py with simple_train.py and simple_test.py ([0e7fbb5](https://github.com///commit/0e7fbb584ec8d0ec0047181c7a258df1ff0e4965))
 - add test.py for KMeans model testing with scatter plot visualization ([12995cc](https://github.com///commit/12995cc21cb4b6ce1bf413bf2a78bc4aec68ffd7))
 - rename ul_kmean.py to simple.py and implement KMeans clustering functionality ([cc2bcc6](https://github.com///commit/cc2bcc63fc94af606d0c602ac3bbc04ba11e33e7))
 - store timer in session state for improved data preparation feedback ([a61d748](https://github.com///commit/a61d74827fd4c113ca8ae80d5520a6744957f88d))
@@ -35,6 +38,7 @@
 
 ### Chore
 
+- update CHANGELOG.md to reflect recent feature additions and improvements ([a92fcf7](https://github.com///commit/a92fcf7767a18e6bae4bb7f479cee6296b03ded3))
 - update CHANGELOG.md to include timer functionality and bug fixes ([47dec57](https://github.com///commit/47dec57ff1a8b300bad37a7066211b5ee65fdfa8))
 - update CHANGELOG.md for version 0.1.0 release date change ([3b1ae7f](https://github.com///commit/3b1ae7fec8d1215436fba387a27cb8ba33884470))
 
