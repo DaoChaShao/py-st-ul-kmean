@@ -17,9 +17,10 @@ empty_table: empty = empty()
 
 if "data" not in session_state:
     session_state["data"] = None
+if "timer" not in session_state:
+    session_state["timer"] = ""
 
 with sidebar:
-    timer: str = ""
     if session_state["data"] is None:
         subheader("Data Preparation")
         uploaded_file = file_uploader(
@@ -38,7 +39,7 @@ with sidebar:
                     disabled=True,
                     use_container_width=True,
                 )
-            timer = repr(t)
+            session_state["timer"] = repr(t)
             rerun()
     else:
         empty_table.data_editor(
@@ -47,7 +48,7 @@ with sidebar:
             disabled=True,
             use_container_width=True,
         )
-        empty_messages.success(f"{timer} You can clear it if needed.")
+        empty_messages.success(f"{session_state.timer} You can clear it if needed.")
 
         if button("Clear Data", type="primary", use_container_width=True, help="Clear the uploaded dataset."):
             session_state.clear()
