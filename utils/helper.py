@@ -73,7 +73,7 @@ class SeedSetter(object):
         return f"SeedSetter with seed {self._seed}"
 
 
-def scatter_without_category(data: DataFrame, x_name: str, y_name: str):
+def scatter_2d_without_category(data: DataFrame, x_name: str, y_name: str):
     """ Get the unique categories in the target column.
     :param data: the DataFrame containing the data
     :param x_name: the name of the feature column (X)
@@ -88,7 +88,7 @@ def scatter_without_category(data: DataFrame, x_name: str, y_name: str):
     )
 
 
-def scatter_with_category(data: DataFrame, x_name: str, y_name: str, category: str):
+def scatter_2d_with_category(data: DataFrame, x_name: str, y_name: str, category: str):
     """ Get the unique categories in the target column.
     :param data: the DataFrame containing the data
     :param x_name: the name of the feature column (X)
