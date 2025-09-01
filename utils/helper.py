@@ -31,6 +31,7 @@ class Timer(object):
         self._start = perf_counter()
         print("-" * 50)
         print(f"{self._description} has started.")
+        print("-" * 50)
         return self
 
     def __exit__(self, *args):
@@ -43,7 +44,6 @@ class Timer(object):
         if self._elapsed != 0.0:
             print("-" * 50)
             return f"{self._description} took {self._elapsed:.{self._precision}f} seconds."
-        print("-" * 50)
         return f"{self._description} has NOT started."
 
 
@@ -73,7 +73,22 @@ class SeedSetter(object):
         return f"SeedSetter with seed {self._seed}"
 
 
-def scatter_category(data: DataFrame, x_name: str, y_name: str, category: str):
+def scatter_without_category(data: DataFrame, x_name: str, y_name: str):
+    """ Get the unique categories in the target column.
+    :param data: the DataFrame containing the data
+    :param x_name: the name of the feature column (X)
+    :param y_name: the name of the target column (Y)
+    :return: a scatter plot with different colours and symbols for each category
+    """
+    return scatter(
+        data,
+        x=x_name,
+        y=y_name,
+        hover_data=[x_name, y_name]
+    )
+
+
+def scatter_with_category(data: DataFrame, x_name: str, y_name: str, category: str):
     """ Get the unique categories in the target column.
     :param data: the DataFrame containing the data
     :param x_name: the name of the feature column (X)
@@ -88,4 +103,4 @@ def scatter_category(data: DataFrame, x_name: str, y_name: str, category: str):
         color=category,
         symbol=category,
         hover_data=[x_name, y_name, category]
-    )
+    ).update_layout(coloraxis_showscale=False)
