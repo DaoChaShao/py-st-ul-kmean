@@ -29,19 +29,23 @@ def pages_setter() -> None:
         "page": [
             "subpages/home.py",
             "subpages/preparation.py",
-            "subpages/ul_kmean.py",
+            "subpages/simple.py",
+            "subpages/test.py",
             "subpages/about.py",
         ],
         "title": [
             "Home",
             "Data Preparation",
-            "Unsupervised Learning - KMeans",
+            "Simple KMeans - Train",
+            "Simple KMeans - Test",
             "About",
         ],
         "icon": [
             ":material/home:",
             ":material/dataset:",
             ":material/function:",
+            ":material/assignment:",
+            # ":material/assessment",
             ":material/info:",
         ],
     }
@@ -53,9 +57,10 @@ def pages_setter() -> None:
         "Core Functions": [
             Page(page=pages["page"][1], title=pages["title"][1], icon=pages["icon"][1]),
             Page(page=pages["page"][2], title=pages["title"][2], icon=pages["icon"][2]),
+            Page(page=pages["page"][3], title=pages["title"][3], icon=pages["icon"][3]),
         ],
         "Information": [
-            Page(page=pages["page"][3], title=pages["title"][3], icon=pages["icon"][3]),
+            Page(page=pages["page"][4], title=pages["title"][4], icon=pages["icon"][4]),
         ],
     }
     pg = navigation(structure, position="sidebar", expanded=True)
