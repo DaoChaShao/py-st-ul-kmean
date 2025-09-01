@@ -31,6 +31,8 @@ def pages_setter() -> None:
             "subpages/preparation.py",
             "subpages/simple_train.py",
             "subpages/simple_test.py",
+            "subpages/advanced_train.py",
+            "subpages/advanced_test.py",
             "subpages/about.py",
         ],
         "title": [
@@ -38,6 +40,8 @@ def pages_setter() -> None:
             "Data Preparation",
             "Simple KMeans - Train",
             "Simple KMeans - Test",
+            "Advanced KMeans - Train",
+            "Advanced KMeans - Test",
             "About",
         ],
         "icon": [
@@ -45,7 +49,8 @@ def pages_setter() -> None:
             ":material/dataset:",
             ":material/function:",
             ":material/assignment:",
-            # ":material/assessment",
+            ":material/functions:",
+            ":material/assessment:",
             ":material/info:",
         ],
     }
@@ -58,9 +63,11 @@ def pages_setter() -> None:
             Page(page=pages["page"][1], title=pages["title"][1], icon=pages["icon"][1]),
             Page(page=pages["page"][2], title=pages["title"][2], icon=pages["icon"][2]),
             Page(page=pages["page"][3], title=pages["title"][3], icon=pages["icon"][3]),
+            Page(page=pages["page"][4], title=pages["title"][4], icon=pages["icon"][4]),
+            Page(page=pages["page"][5], title=pages["title"][5], icon=pages["icon"][5]),
         ],
         "Information": [
-            Page(page=pages["page"][4], title=pages["title"][4], icon=pages["icon"][4]),
+            Page(page=pages["page"][6], title=pages["title"][6], icon=pages["icon"][6]),
         ],
     }
     pg = navigation(structure, position="sidebar", expanded=True)
