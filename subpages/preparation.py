@@ -10,6 +10,8 @@ from pandas import read_csv, DataFrame
 from streamlit import (empty, sidebar, subheader, session_state, file_uploader,
                        rerun, button)
 
+from utils.helper import Timer
+
 empty_messages: empty = empty()
 empty_table: empty = empty()
 
@@ -17,6 +19,7 @@ if "data" not in session_state:
     session_state["data"] = None
 
 with sidebar:
+    timer: str = ""
     if session_state["data"] is None:
         subheader("Data Preparation")
         uploaded_file = file_uploader(
@@ -27,13 +30,15 @@ with sidebar:
         if uploaded_file is None:
             empty_messages.error("Please upload a dataset in the Home page first.")
         else:
-            session_state["data"]: DataFrame = read_csv(uploaded_file)
-            empty_table.data_editor(
-                session_state["data"],
-                hide_index=True,
-                disabled=True,
-                use_container_width=True,
-            )
+            with Timer("Data Loading") as t:
+                session_state["data"]: DataFrame = read_csv(uploaded_file)
+                empty_table.data_editor(
+                    session_state["data"],
+                    hide_index=True,
+                    disabled=True,
+                    use_container_width=True,
+                )
+            timer = repr(t)
             rerun()
     else:
         empty_table.data_editor(
@@ -42,7 +47,7 @@ with sidebar:
             disabled=True,
             use_container_width=True,
         )
-        empty_messages.success("Dataset uploaded.")
+        empty_messages.success(f"{timer} You can clear it if needed.")
 
         if button("Clear Data", type="primary", use_container_width=True, help="Clear the uploaded dataset."):
             session_state.clear()
