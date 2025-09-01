@@ -1,10 +1,13 @@
 <!-- insertion marker -->
 <a name="0.1.0"></a>
 
-## [0.1.0](https://github.com///compare/b18ac57c76f233266b31595524bf01a39c9059e3...0.1.0) (2025-08-31)
+## [0.1.0](https://github.com///compare/b18ac57c76f233266b31595524bf01a39c9059e3...0.1.0) (2025-09-01)
 
 ### Features
 
+- add preparation.py for data upload and preparation functionality ([c8214b4](https://github.com///commit/c8214b40faf280325659a53bc469a61809d9ca25))
+- update layout.py to include new pages for Data Preparation and About sections ([d0d97b4](https://github.com///commit/d0d97b408f76ade7b58730f82f7cf3daf0cb72ee))
+- add CHANGELOG.md for version 0.1.0 with project features and updates ([4708409](https://github.com///commit/4708409b16533946bb9574df8d5eb2f7b65f7174))
 - add ul_kmean.py for K-means clustering implementation ([8e98545](https://github.com///commit/8e98545bede170a0b4f809eca6f9aa37c103dbe6))
 - add requirements.txt for project dependencies ([a394eba](https://github.com///commit/a394eba7ee226b823223a1648e0b669d34c779cc))
 - add Chinese README.md for application introduction and usage instructions ([f8551d4](https://github.com///commit/f8551d4214dc8637748a583c0ffcbf96f62022f6))
