@@ -29,8 +29,8 @@ def pages_setter() -> None:
         "page": [
             "subpages/home.py",
             "subpages/preparation.py",
-            "subpages/simple.py",
-            "subpages/test.py",
+            "subpages/simple_train.py",
+            "subpages/simple_test.py",
             "subpages/about.py",
         ],
         "title": [
