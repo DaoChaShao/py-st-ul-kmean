@@ -12,7 +12,7 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 from streamlit import (empty, sidebar, subheader, session_state, selectbox,
                        caption, number_input, button, columns, metric, rerun)
 
-from utils.helper import Timer, scatter_without_category, scatter_with_category
+from utils.helper import Timer, scatter_2d_without_category, scatter_2d_with_category
 
 empty_messages: empty = empty()
 left, right = columns(2, gap="large")
@@ -100,7 +100,7 @@ with sidebar:
                 use_container_width=True,
             )
 
-            fig = scatter_without_category(session_state["data"], x_name, y_name)
+            fig = scatter_2d_without_category(session_state["data"], x_name, y_name)
             empty_chart.plotly_chart(fig)
 
             if button(
@@ -127,7 +127,7 @@ with sidebar:
                 session_state["data"][[x_name, y_name, category_name]],
                 hide_index=True, disabled=True, use_container_width=True,
             )
-            fig = scatter_with_category(session_state["data"], x_name, y_name, category_name)
+            fig = scatter_2d_with_category(session_state["data"], x_name, y_name, category_name)
             fig.add_scatter(
                 x=centres[:, 0],
                 y=centres[:, 1],
