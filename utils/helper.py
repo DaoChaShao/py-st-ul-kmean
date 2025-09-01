@@ -30,7 +30,7 @@ class Timer(object):
         """ Start the timer """
         self._start = perf_counter()
         print("-" * 50)
-        print(f"{self._description} has been started.")
+        print(f"{self._description} has started.")
         return self
 
     def __exit__(self, *args):
@@ -44,7 +44,7 @@ class Timer(object):
             print("-" * 50)
             return f"{self._description} took {self._elapsed:.{self._precision}f} seconds."
         print("-" * 50)
-        return f"{self._description} has NOT been started."
+        return f"{self._description} has NOT started."
 
 
 class SeedSetter(object):
