@@ -3,7 +3,7 @@
 # @Time     :   2025/8/31 23:04
 # @Author   :   Shawn
 # @Version  :   Version 0.1.0
-# @File     :   simple.py
+# @File     :   simple_train.py
 # @Desc     :
 
 from sklearn.cluster import KMeans
