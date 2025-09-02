@@ -15,7 +15,7 @@ from streamlit import (empty, sidebar, subheader, session_state, number_input,
                        caption, selectbox, multiselect, button, rerun,
                        columns, metric)
 
-from utils.helper import scatter_3d_without_category, Timer
+from utils.helper import scatter_3d_without_category, Timer, scatter_3d_with_category
 
 empty_messages: empty = empty()
 left, _ = columns(2, gap="large")
@@ -35,6 +35,10 @@ if "timer" not in session_state:
     session_state["timer"] = ""
 if "pca" not in session_state:
     session_state["pca"] = None
+if "advanced_df" not in session_state:
+    session_state["advanced_df"] = None
+if "centres" not in session_state:
+    session_state["centres"] = None
 
 with sidebar:
     if session_state["data"] is None:
@@ -102,10 +106,10 @@ with sidebar:
                 # Initialise PCA for 3D visualisation
                 session_state["pca"] = PCA(n_components=3)
                 transform = session_state["pca"].fit_transform(X)
-                df = DataFrame(transform, columns=["PCA-X", "PCA-Y", "PCA-Z"])
-                fig = scatter_3d_without_category(df)
 
                 if session_state["advanced"] is None:
+                    session_state["advanced_df"] = DataFrame(transform, columns=["PCA-X", "PCA-Y", "PCA-Z"])
+                    fig = scatter_3d_without_category(session_state.advanced_df)
                     empty_chart.plotly_chart(fig, use_container_width=True)
 
                     if button(
@@ -122,17 +126,24 @@ with sidebar:
                         metric("Best K Value", best_k, delta=f"{max(scores):.4f}", delta_color="normal", )
 
                     transform = session_state["pca"].transform(session_state["advanced"].cluster_centers_)
-                    centres: DataFrame = DataFrame(transform, columns=["PCA-X", "PCA-Y", "PCA-Z"])
+                    session_state["centres"]: DataFrame = DataFrame(transform, columns=["PCA-X", "PCA-Y", "PCA-Z"])
 
                     category_name: str = "Cluster"
                     cluster = session_state["advanced"].predict(X)
-                    session_state["data"][category_name] = cluster
+                    session_state["advanced_df"][category_name] = cluster
 
                     # Show the clustering results
+                    fig = scatter_3d_with_category(
+                        data=session_state["advanced_df"],
+                        x_name="PCA-X",
+                        y_name="PCA-Y",
+                        z_name="PCA-Z",
+                        category_name=category_name
+                    )
                     fig.add_scatter3d(
-                        x=centres["PCA-X"],
-                        y=centres["PCA-Y"],
-                        z=centres["PCA-Z"],
+                        x=session_state.centres["PCA-X"],
+                        y=session_state.centres["PCA-Y"],
+                        z=session_state.centres["PCA-Z"],
                         name="Centres",
                         mode="markers",
                         marker=dict(color="red", size=10, symbol="circle")
