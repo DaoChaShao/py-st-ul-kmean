@@ -7,8 +7,9 @@
 # @Desc     :
 
 from pandas import DataFrame
-from plotly.express import scatter
+from plotly.express import scatter, scatter_3d
 from random import seed as random_seed, getstate as get_state, setstate as set_state
+from sklearn.decomposition import PCA
 from time import perf_counter
 
 
@@ -103,4 +104,23 @@ def scatter_2d_with_category(data: DataFrame, x_name: str, y_name: str, category
         color=category,
         symbol=category,
         hover_data=[x_name, y_name, category]
+    ).update_layout(coloraxis_showscale=False)
+
+
+def scatter_3d_without_category(data: DataFrame, x_name: str = "PCA-X", y_name: str = "PCA-Y", z_name: str = "PCA-Z"):
+    """ Get the unique categories in the target column.
+    :param data: the DataFrame containing the data
+    :param x_name: the name of the feature column (X), default is "PCA-X"
+    :param y_name: the name of the target column (Y), default is "PCA-Y"
+    :param z_name: the name of the target column (Z), default is "PCA-Z"
+    :param colour_by: the name of the category column, default is None
+    :return: a scatter plot with different colours and symbols for each category
+    """
+    return scatter_3d(
+        data,
+        x=x_name,
+        y=y_name,
+        z=z_name,
+        height=650,
+        hover_data=[x_name, y_name, z_name]
     ).update_layout(coloraxis_showscale=False)
