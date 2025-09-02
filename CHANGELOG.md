@@ -5,6 +5,7 @@
 
 ### Features
 
+- add session state management for feature selection in advanced training ([02846f2](https://github.com///commit/02846f2c23a0f0e1c0752f35ef75786e8cc7b2f8))
 - add 3D scatter plot function with category visualization in helper.py ([e630b9c](https://github.com///commit/e630b9c6c35a7fe1acea812d068df5d1d2298ee4))
 - integrate 3D scatter plot with category visualization in advanced KMeans training ([f8596ff](https://github.com///commit/f8596ff8f107082d65648089d1340c1c57e228a1))
 - implement interactive testing interface for advanced KMeans model in advanced_test.py ([de8d295](https://github.com///commit/de8d29599c04d6855b0ef36c901f9728f54f78e3))
@@ -50,6 +51,7 @@
 
 ### Chore
 
+- update CHANGELOG.md for version 0.1.0 with recent feature additions ([65c1d34](https://github.com///commit/65c1d3484815266de7a5ae1f13be80e7ace7303b))
 - update CHANGELOG.md for version 0.1.0 with recent feature additions and improvements ([7dec34a](https://github.com///commit/7dec34a1ff7d1efabf1030166705ccb1eaabfb35))
 - update CHANGELOG.md to reflect recent feature additions and file renaming ([913e04a](https://github.com///commit/913e04adfd2e7e95dda8524aac3ff2a269d13992))
 - update CHANGELOG.md to include recent file renaming and layout changes ([47431aa](https://github.com///commit/47431aad31ec475a84bc8126dabf821d2333ca8b))
