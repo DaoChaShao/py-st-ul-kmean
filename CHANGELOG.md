@@ -5,6 +5,10 @@
 
 ### Features
 
+- update Chinese README.md with detailed project description and feature list for KMeans clustering application ([39788ed](https://github.com///commit/39788eded3b7723af9bca500a392ca5fe139b5f0))
+- update README.md with detailed project description and feature list for K-Means clustering application ([528205d](https://github.com///commit/528205d0c5cd6ae168e6cfb1bc11088d2b36d0cf))
+- enhance home page with introduction and features overview for KMeans Clustering app ([e00b486](https://github.com///commit/e00b48683048704cc7760978b14099fc529d45f7))
+- add application information section with features overview in about.py ([1636902](https://github.com///commit/163690287aca8e6ec0db92692e22897eb4ef0097))
 - add session state management for feature selection in advanced training ([02846f2](https://github.com///commit/02846f2c23a0f0e1c0752f35ef75786e8cc7b2f8))
 - add 3D scatter plot function with category visualization in helper.py ([e630b9c](https://github.com///commit/e630b9c6c35a7fe1acea812d068df5d1d2298ee4))
 - integrate 3D scatter plot with category visualization in advanced KMeans training ([f8596ff](https://github.com///commit/f8596ff8f107082d65648089d1340c1c57e228a1))
@@ -51,7 +55,7 @@
 
 ### Chore
 
-- update CHANGELOG.md for version 0.1.0 with recent feature additions ([65c1d34](https://github.com///commit/65c1d3484815266de7a5ae1f13be80e7ace7303b))
+- update CHANGELOG.md for version 0.1.0 with recent feature additions ([19476b0](https://github.com///commit/19476b07e0255dc95c98d48e6b8c6bf78193ded3))
 - update CHANGELOG.md for version 0.1.0 with recent feature additions and improvements ([7dec34a](https://github.com///commit/7dec34a1ff7d1efabf1030166705ccb1eaabfb35))
 - update CHANGELOG.md to reflect recent feature additions and file renaming ([913e04a](https://github.com///commit/913e04adfd2e7e95dda8524aac3ff2a269d13992))
 - update CHANGELOG.md to include recent file renaming and layout changes ([47431aa](https://github.com///commit/47431aad31ec475a84bc8126dabf821d2333ca8b))
