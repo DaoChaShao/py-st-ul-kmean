@@ -5,6 +5,9 @@
 
 ### Features
 
+- add 3D scatter plot function with category visualization in helper.py ([e630b9c](https://github.com///commit/e630b9c6c35a7fe1acea812d068df5d1d2298ee4))
+- integrate 3D scatter plot with category visualization in advanced KMeans training ([f8596ff](https://github.com///commit/f8596ff8f107082d65648089d1340c1c57e228a1))
+- implement interactive testing interface for advanced KMeans model in advanced_test.py ([de8d295](https://github.com///commit/de8d29599c04d6855b0ef36c901f9728f54f78e3))
 - enhance training settings with advanced KMeans model checks and session state management in simple_train.py ([8b3e27d](https://github.com///commit/8b3e27d6f45814630eb7cf9414a9d55bddc8fd18))
 - add 3D scatter plot function for PCA visualization in helper.py ([a18c1ac](https://github.com///commit/a18c1acc7119caef1e619eeba7567afba4c56027))
 - implement advanced KMeans clustering with PCA visualization in advanced_train.py ([0d00101](https://github.com///commit/0d00101ee4f36eb3ee97d79d0b065753e3ff7d22))
@@ -47,6 +50,7 @@
 
 ### Chore
 
+- update CHANGELOG.md for version 0.1.0 with recent feature additions and improvements ([7dec34a](https://github.com///commit/7dec34a1ff7d1efabf1030166705ccb1eaabfb35))
 - update CHANGELOG.md to reflect recent feature additions and file renaming ([913e04a](https://github.com///commit/913e04adfd2e7e95dda8524aac3ff2a269d13992))
 - update CHANGELOG.md to include recent file renaming and layout changes ([47431aa](https://github.com///commit/47431aad31ec475a84bc8126dabf821d2333ca8b))
 - update CHANGELOG.md to reflect recent feature additions and improvements ([a92fcf7](https://github.com///commit/a92fcf7767a18e6bae4bb7f479cee6296b03ded3))
