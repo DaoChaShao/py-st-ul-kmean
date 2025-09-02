@@ -4,7 +4,7 @@
 # @Author   :   Shawn
 # @Version  :   Version 0.1.0
 # @File     :   advanced_train.py
-# @Desc     :   
+# @Desc     :
 
 from pandas import DataFrame
 from sklearn.cluster import KMeans
@@ -39,6 +39,8 @@ if "advanced_df" not in session_state:
     session_state["advanced_df"] = None
 if "centres" not in session_state:
     session_state["centres"] = None
+if "select" not in session_state:
+    session_state["select"] = None
 
 with sidebar:
     if session_state["data"] is None:
@@ -78,9 +80,11 @@ with sidebar:
             selection: list[str] = multiselect(
                 "Select feature to drop (optional)",
                 options=cols,
+                default=session_state["select"],
                 placeholder="Select features to train",
                 help="You should select a feature to drop from the dataset.",
             )
+            session_state["select"] = selection
             caption(f"{len(selection)} features will be used in the model training.")
 
             if not selection:
@@ -154,7 +158,9 @@ with sidebar:
                             "Clear Clustering Model and Retry", type="primary", use_container_width=True,
                     ):
                         session_state["advanced"] = None
-                        session_state["data"].drop(columns=[category_name], inplace=True)
+                        session_state["select"] = None
+                        if category_name in session_state["data"].columns:
+                            session_state["data"].drop(columns=[category_name], inplace=True)
                         rerun()
 
                     empty_messages.success(f"{session_state.timer} KMeans clustering has been completed.")
