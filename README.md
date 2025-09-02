@@ -5,8 +5,11 @@
 
 **INTRODUCTION**
 ---
-Welcome to the Customer Segmentation Analysis Platform! This application utilises the Mall Customer dataset to help you
-explore customer clustering patterns through unsupervised learning techniques.
+This project is a **Streamlit-based interactive K-Means** clustering application designed to simplify both training and
+testing of clustering models. It supports **simple 2D K-Means clustering** as well as **advanced multi-feature 3D
+clustering** with **PCA visualisation**. Users can upload their datasets, select features for clustering, visualize
+clusters interactively, and test new points in real-time. The application emphasises **reproducibility**, **scalability
+**, and **user-friendly** visualisation.
 
 **DATASET INTRODUCTION**
 ---
@@ -33,11 +36,30 @@ Through this application, you can:
 **FEATURES**
 ---
 
-+ Data exploration and visualisation
-+ Comparison of multiple unsupervised learning algorithms
-+ Interactive parameter adjustment
-+ 2D/3D visualisation of clustering results
-+ Customer group characteristic analysis
+1. **Data Upload & Preparation**
+    + Load CSV files with automatic preview in an interactive table.
+    + Supports clearing and re-uploading datasets.
+    + Provides timing metrics for data loading.
+2. **Simple K-Means Training**
+    + Train K-Means on two selected features (2D).
+    + Automatically identifies the optimal number of clusters using the silhouette score.
+    + Standardises features automatically.
+    + Visualises clusters in 2D scatter plots with cluster centres.
+    + Supports clearing the trained model to retry.
+3. **Advanced K-Means Training**
+    + Train K-Means on multiple selected features.
+    + Uses PCA to project high-dimensional data to 3D for visualisation.
+    + Finds the optimal number of clusters automatically.
+    + 3D scatter plot visualisation with cluster centres.
+    + Supports selecting multiple features to include/exclude dynamically.
+4. **Model Testing**
+    + Test trained models interactively by selecting new input values.
+    + Simple mode: 2D test points added to scatter plots.
+    + Advanced mode: multi-feature test points projected in 3D with PCA.
+    + Displays predicted cluster and relevant metrics.
+5. **Reproducibility**
+    + Random seed selection ensures consistent clustering results.
+    + Standard scaling ensures numeric features are normalised.
 
 Start your unsupervised learning journey now!
 
