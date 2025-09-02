@@ -1,10 +1,13 @@
 <!-- insertion marker -->
 <a name="0.1.0"></a>
 
-## [0.1.0](https://github.com///compare/b18ac57c76f233266b31595524bf01a39c9059e3...0.1.0) (2025-09-01)
+## [0.1.0](https://github.com///compare/b18ac57c76f233266b31595524bf01a39c9059e3...0.1.0) (2025-09-02)
 
 ### Features
 
+- enhance training settings with advanced KMeans model checks and session state management in simple_train.py ([8b3e27d](https://github.com///commit/8b3e27d6f45814630eb7cf9414a9d55bddc8fd18))
+- add 3D scatter plot function for PCA visualization in helper.py ([a18c1ac](https://github.com///commit/a18c1acc7119caef1e619eeba7567afba4c56027))
+- implement advanced KMeans clustering with PCA visualization in advanced_train.py ([0d00101](https://github.com///commit/0d00101ee4f36eb3ee97d79d0b065753e3ff7d22))
 - rename scatter functions for 2D clarity in simple_train.py ([f1ba37f](https://github.com///commit/f1ba37f0c3fb05d5de6cb6c1b68e2878bf37a03c))
 - update scatter function name for consistency and clarity ([6e05dac](https://github.com///commit/6e05dacdfa8aec152d960f7e2ac02eceb0447c9a))
 - add advanced training and testing pages to layout ([7453b89](https://github.com///commit/7453b898e700bce811eff1e16b931ccade4e87db))
@@ -44,6 +47,7 @@
 
 ### Chore
 
+- update CHANGELOG.md to reflect recent feature additions and file renaming ([913e04a](https://github.com///commit/913e04adfd2e7e95dda8524aac3ff2a269d13992))
 - update CHANGELOG.md to include recent file renaming and layout changes ([47431aa](https://github.com///commit/47431aad31ec475a84bc8126dabf821d2333ca8b))
 - update CHANGELOG.md to reflect recent feature additions and improvements ([a92fcf7](https://github.com///commit/a92fcf7767a18e6bae4bb7f479cee6296b03ded3))
 - update CHANGELOG.md to include timer functionality and bug fixes ([47dec57](https://github.com///commit/47dec57ff1a8b300bad37a7066211b5ee65fdfa8))
